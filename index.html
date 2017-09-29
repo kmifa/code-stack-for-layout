@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Code Stack For Layout</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- sns -->
+
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="">
+<meta property="og:locale" content="ja_JP" />
+
+<meta id="tw-text" property="tw:description" content="テキストが入ります" />
+
+<!-- favicon icon -->
+
+<link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href=""> 
+<!-- 256pxのfavicon.icoを設定 -->
+<link rel="apple-touch-icon" sizes="57x57" href="">
+<link rel="apple-touch-icon" sizes="114x114" href="">
+<link rel="apple-touch-icon" sizes="72x72" href="">
+<link rel="apple-touch-icon" sizes="144x144" href="">
+<link rel="apple-touch-icon" sizes="60x60" href="">
+<link rel="apple-touch-icon" sizes="120x120" href="">
+<link rel="apple-touch-icon" sizes="76x76" href="">
+<link rel="apple-touch-icon" sizes="152x152" href="">
+<link rel="apple-touch-icon" sizes="180x180" href="">
+
+<!-- styles -->
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+
+
+<!-- scripts -->
+
+<!-- <script src="/common/scripts/main.js"></script> -->
+
+</head>
+
+<body>
+
+<main id="wrap">
+    <header>
+        <h1>Code Stack</h1>
+
+        <ul class="big-modules">
+            <li>Header</li>
+            <li>Content</li>
+            <li>Footer</li>
+        </ul>
+
+        <ul class="utils">
+            <li>Preview</li>
+            <li>Download</li>
+        </ul>
+
+        <div id="header-modal">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </header>
+
+    <div id="top-menu">
+        <div class="user-area clearfix">
+            <div id="user-img">
+                <img src="" alt="img">
+            </div>
+            <p id="user-name">
+                User
+            </p>
+        </div>
+    </div>
+
+    <div id="main-wrap" class="clearfix">
+            <div id="layout-area">
+                    <div class="layout-category">
+                        <ul class="clearfix">
+                            <li>Block</li>
+                            <li>preview</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="middle-bar">
+
+            </div>
+        
+            <div id="editor-area">
+                    <div class="layout-category">
+                        <ul class="clearfix">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+                    <div id="ace-api"></div>
+            </div>
+    </div>
+
+    
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src/ace.js"></script>
+<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src/ext-emmet.js">  </script>
+<script src="https://rawgithub.com/nightwing/emmet-core/master/emmet.js"></script>
+
+<script>
+        var editor = ace.edit("ace-api");
+        editor.$blockScrolling = Infinity;
+        editor.session.setMode("ace/mode/html");
+        editor.setValue(document.documentElement.innerHTML, -1);
+        var Emmet = require("ace/ext/emmet"); // important to trigger script execution
+        editor.setOption("enableEmmet", true);
+      </script>
+
+</body>
+</html>
