@@ -109,33 +109,27 @@ h1{
     height: 100%;
 }
 
-#layout-area{
+/* block-area */
+
+#block-area{
     float: left;
     height: 100%;
     width: 49.5%;
     border-right: 1px solid #c3c3c3;
+    -khtml-user-drag: element;
+    padding: 30px;
     
 }
 
-#layout-area .layout-category{
-
+#block-layout{
+    height: 100%;
 }
 
-#layout-area .layout-category li{
-    float: left;
-    width: 50%;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    border-bottom: 1px solid #c3c3c3;
-}
-
-#layout-area .layout-category li:hover{
-    cursor: pointer;
-}
-
-#layout-area .layout-category li:first-child{
-    border-right: 1px solid #c3c3c3;
+#block-area div{
+    width: 100%;
+    height: 30px;
+    background-color: blue;
+    margin-bottom: 10px;
 }
 
 /* middle-bar */
@@ -154,35 +148,10 @@ h1{
 
 /* editor-area */
 
-#editor-area{
+#preview-area{
     float: left;
     height: 100%;
     width: 49.5%;
     border-left: 1px solid #c3c3c3;
-}
-
-#editor-area .layout-category{
-
-}
-
-#editor-area .layout-category li{
-    float: left;
-    width: 33.3%;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    border-bottom: 1px solid #c3c3c3;
-    border-right: 1px solid #c3c3c3;
-}
-
-#editor-area .layout-category li:hover{
-    cursor: pointer;
-}
-
-#editor-area .layout-category li:last-child{
-    border-right: none;
-}
-
-#editor-area #ace-api{
-    height: 100%;
+    overflow: hidden;
 }
