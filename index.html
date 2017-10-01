@@ -65,14 +65,14 @@
             <li>Download</li>
         </ul>
 
-        <div id="header-modal" ondragover="f_dragover(event)" ondrop="f_drop(event)">
+        <div id="header-modal">
 
 
-            <div id="1" draggable="true" ondragstart="f_dragstart(event)"></div>
-            <div id="2" draggable="true" ondragstart="f_dragstart(event)"></div>
-            <div id="3" draggable="true" ondragstart="f_dragstart(event)"></div>
-            <div id="4" draggable="true" ondragstart="f_dragstart(event)"></div>
-            <div id="5" draggable="true" ondragstart="f_dragstart(event)"></div>
+            <div id="1" draggable="true" class="draggable">1</div>
+            <div id="2" draggable="true" class="draggable">2</div>
+            <div id="3" draggable="true" class="draggable">3</div>
+            <div id="4" draggable="true" class="draggable">4</div>
+            <div id="5" draggable="true" class="draggable">5</div>
         </div>
 
     </header>
@@ -89,9 +89,11 @@
     </div>
 
     <div id="main-wrap" class="clearfix">
-            <div id="block-area" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+            <div id="block-area"></div>
             <div id="middle-bar"></div> 
-            <div id="preview-area"></div>
+            <div id="preview-area">
+                <iframe id="iframe-preview" src="./test.html"></iframe>
+            </div>
     </div>
 
     
@@ -105,30 +107,7 @@
 <script src="https://rawgithub.com/nightwing/emmet-core/master/emmet.js"></script> -->
 <!-- <script src="js/jquery-ui.min.js"></script> -->
 <script src="js/drag.js"></script>
-<script>
-        /***** ドラッグ開始時の処理 *****/
-        function f_dragstart(event){
-            //ドラッグするデータのid名をDataTransferオブジェクトにセット
-            event.dataTransfer.setData("text", event.target.id);
-        }
-        
-        /***** ドラッグ要素がドロップ要素に重なっている間の処理 *****/
-        function f_dragover(event){
-            //dragoverイベントをキャンセルして、ドロップ先の要素がドロップを受け付けるようにする
-            event.preventDefault();
-        }
-        
-        /***** ドロップ時の処理 *****/
-        function f_drop(event){
-            //ドラッグされたデータのid名をDataTransferオブジェクトから取得
-            var id_name = event.dataTransfer.getData("text");
-            //id名からドラッグされた要素を取得
-            var drag_elm =document.getElementById(id_name);
-            //ドロップ先にドラッグされた要素を追加
-            event.currentTarget.appendChild(drag_elm);
-            //エラー回避のため、ドロップ処理の最後にdropイベントをキャンセルしておく
-            event.preventDefault();
-        }
-        </script>
+<script src="js/iframe.js"></script>
+
 </body>
 </html>
