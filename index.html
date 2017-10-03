@@ -61,18 +61,22 @@
         </ul>
 
         <ul class="utils">
-            <li>Preview</li>
             <li>Download</li>
         </ul>
 
         <div id="header-modal">
-
-
-            <div id="1" draggable="true" class="draggable">1</div>
-            <div id="2" draggable="true" class="draggable">2</div>
-            <div id="3" draggable="true" class="draggable">3</div>
-            <div id="4" draggable="true" class="draggable">4</div>
-            <div id="5" draggable="true" class="draggable">5</div>
+            
+            <div class="draggable" id="header-1" draggable="true">
+                    <div class="get-html" data-url="test-data/header/test-header.html">header-1</div>
+                    <div class="hide-html"></div>
+            </div>
+            <div class="draggable" id="content-1" draggable="true">
+                    <div class="get-html" data-url="test-data/content/content.html">content-1</div>
+            </div>
+            <div class="draggable" id="content-2" draggable="true">
+                    <div class="get-html" data-url="test-data/content/content.html">content-2</div>
+            </div>
+        
         </div>
 
     </header>
@@ -89,10 +93,12 @@
     </div>
 
     <div id="main-wrap" class="clearfix">
-            <div id="block-area"></div>
+            <div id="block-area">
+                    
+            </div>
             <div id="middle-bar"></div> 
             <div id="preview-area">
-                <iframe id="iframe-preview" src="./test.html"></iframe>
+                <iframe id="iframe-preview" src="test-data/template.html"></iframe>
             </div>
     </div>
 
